@@ -16,15 +16,15 @@ MonoBehaviour:
   - itemID: 1007
     itemAmount: 4
   - itemID: 1002
-    itemAmount: 80
+    itemAmount: 73
   - itemID: 1009
     itemAmount: 1
   - itemID: 1011
     itemAmount: 1
   - itemID: 1013
     itemAmount: 1
-  - itemID: 0
-    itemAmount: 0
+  - itemID: 1012
+    itemAmount: 80
   - itemID: 0
     itemAmount: 0
   - itemID: 0

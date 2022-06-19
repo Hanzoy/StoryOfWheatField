@@ -39,6 +39,7 @@ namespace MFarm.Map
             EventHandler.ExecuteActionAfterAnimation += OnExecuteActionAfterAnimation;
             EventHandler.AfterSceneLoadedEvent += OnAfterSceneLoadedEvent;
             EventHandler.GameDayEvent += OnGameDayEvent;
+            EventHandler.RefreshCurrentMap += OnRefreshCurrentMap;
         }
 
 
@@ -47,8 +48,14 @@ namespace MFarm.Map
             EventHandler.ExecuteActionAfterAnimation -= OnExecuteActionAfterAnimation;
             EventHandler.AfterSceneLoadedEvent += OnAfterSceneLoadedEvent;
             EventHandler.GameDayEvent -= OnGameDayEvent;
+            EventHandler.RefreshCurrentMap -= OnRefreshCurrentMap;
         }
-        
+
+        private void OnRefreshCurrentMap()
+        {
+            RefreshMap();
+        }
+
         private void OnAfterSceneLoadedEvent()
         {
             currentGrid = FindObjectOfType<Grid>();
@@ -160,7 +167,7 @@ namespace MFarm.Map
                         break;
                     case ItemType.CollectTool:
                         var currentCrop = GetCropObject(mouseWorldPos);
-                        currentCrop.ProcessToolAction(itemDetails);
+                        currentCrop.ProcessToolAction(itemDetails, currentTile);
                         break;
                 }
                 

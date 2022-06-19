@@ -7,8 +7,10 @@ public class Crop : MonoBehaviour
     public CropDetails cropDetails;
     private int harvestActionCount;
 
-    public void ProcessToolAction(ItemDetails tool)
+    private TileDetails tileDetails;
+    public void ProcessToolAction(ItemDetails tool, TileDetails tile)
     {
+        tileDetails = tile;
         //工具使用次数
         int requireActionCount = cropDetails.GetTotalRequireCount(tool.itemID);
         if (requireActionCount == -1) return;
@@ -63,5 +65,25 @@ public class Crop : MonoBehaviour
                 }
             }
         }
+
+        if (tileDetails != null)
+        {
+            tileDetails.daysSinceLastHarvest++;
+            if (cropDetails.daysToRegrow > 0 && tileDetails.daysSinceLastHarvest < cropDetails.regrowTimes)
+            {
+                tileDetails.growthDays = cropDetails.TotalGrowthDays - cropDetails.daysToRegrow;
+                
+                EventHandler.CallRefreshCurrentMap();
+            }
+            else
+            {
+                tileDetails.daysSinceLastHarvest = -1;
+                tileDetails.seedItemID = -1;
+                
+                
+            }
+            Destroy(gameObject);
+        }
+        
     }
 }
