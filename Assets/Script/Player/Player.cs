@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         yield return null;
         foreach (var anim in _animators)
         {
-            anim.SetTrigger("useTool");
+            anim.SetTrigger("UseTool");
             //人物的面朝方向
             anim.SetFloat("InputX", _mouseX);
             anim.SetFloat("InputY", _mouseY);
