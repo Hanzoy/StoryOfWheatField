@@ -1,3 +1,4 @@
+using Mono.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
 public class CropDetails
@@ -50,4 +51,26 @@ public class CropDetails
     public bool hasParticalEffect;
     //TODO:特效 音效 等
 
+    public bool CheckToolAvailable(int toolID)
+    {
+        foreach (var tool in harvestToolItemID)
+        {
+            if (tool == toolID) return true;
+        }
+
+        return false;
+    }
+
+    public int GetTotalRequireCount(int toolID)
+    {
+        for (var i = 0; i < harvestToolItemID.Length; i++)
+        {
+            if (harvestToolItemID[i] == toolID)
+            {
+                return requireActionCount[i];
+            }
+        }
+
+        return -1;
+    }
 }

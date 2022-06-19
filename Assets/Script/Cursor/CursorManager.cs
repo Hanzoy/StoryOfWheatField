@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CropPlant;
 using MFarm.Map;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -136,6 +137,7 @@ public class CursorManager : MonoBehaviour
                 ItemType.BreakTool => tool,
                 ItemType.ReapTool => tool,
                 ItemType.Furniture => tool,
+                ItemType.CollectTool => tool,
                 _ => normal,
             };
             cursorEnable = true;
@@ -173,6 +175,7 @@ public class CursorManager : MonoBehaviour
         var currentTile = GridMapManager.Instance.GetTileDetailsOnMousePosition(mouseGridPos);
         if (currentTile != null)
         {
+            CropDetails currentCrop = CropManager.Instance.GetCropDetails(currentTile.seedItemID);
             switch (currentItem.itemType)
             {
                 case ItemType.Seed:
@@ -186,6 +189,17 @@ public class CursorManager : MonoBehaviour
                     break;
                 case ItemType.WaterTool:
                     if(currentTile.daysSinceDug > -1 && currentTile.daysSinceWatered == -1) SetCursorValid();else SetCursorInValid();
+                    break;
+                case ItemType.CollectTool:
+                    if (currentCrop != null)
+                    {
+                        if (currentCrop.CheckToolAvailable(currentItem.itemID))
+                            if(currentTile.growthDays >= currentCrop.TotalGrowthDays) SetCursorValid();else SetCursorInValid();
+                    }
+                    else
+                    {
+                        SetCursorInValid();
+                    }
                     break;
             }
         }

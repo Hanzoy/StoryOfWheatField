@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CropDataList_SO
   m_EditorClassIdentifier: 
   cropDetailsList:
-  - seedItemID: 1002
+  - seedItemID: 0
     growthDays: 0100000002000000020000000300000003000000
     growthPrefabs:
     - {fileID: 3211561384726102279, guid: 5a8f1d816aa028a4b81fcec1659991e9, type: 3}

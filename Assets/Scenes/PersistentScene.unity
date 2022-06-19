@@ -545,6 +545,24 @@ MonoBehaviour:
   - partType: 4
     partName: 3
     overrideController: {fileID: 22100000, guid: bf304253e027c0245988b5f5c3aab647, type: 2}
+  - partType: 5
+    partName: 2
+    overrideController: {fileID: 22100000, guid: 0acee4ccb626f4f4c977f5080c90749b, type: 2}
+  - partType: 0
+    partName: 1
+    overrideController: {fileID: 22100000, guid: 61d51ad8e09faa44da05a9e180d05204, type: 2}
+  - partType: 0
+    partName: 0
+    overrideController: {fileID: 22100000, guid: 382eeb5564d821b4b8209e98879ed19b, type: 2}
+  - partType: 5
+    partName: 0
+    overrideController: {fileID: 22100000, guid: 4f03ae61f73b1de45b7a76897c64b1c8, type: 2}
+  - partType: 5
+    partName: 1
+    overrideController: {fileID: 22100000, guid: 25c839629faeea94c92abe5424ce9c11, type: 2}
+  - partType: 5
+    partName: 3
+    overrideController: {fileID: 22100000, guid: 369b14dd923ecd946969b798a50f08da, type: 2}
 --- !u!1 &652506454
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Inventory;
 using UnityEngine;
 
 public class AnimatorOverride : MonoBehaviour
@@ -27,12 +28,31 @@ public class AnimatorOverride : MonoBehaviour
     {
         EventHandler.ItemSelectedEvent += OnItemSelectedEvent;
         EventHandler.BeforeSceneUnloadEvent += OnforeSceneUnloadEvent;
+        EventHandler.HarvestAtPlayerPosition += OnHarvestAtPlayerPosition;
     }
 
     private void OnDisable()
     {
         EventHandler.ItemSelectedEvent -= OnItemSelectedEvent;
         EventHandler.BeforeSceneUnloadEvent -= OnforeSceneUnloadEvent;
+        EventHandler.HarvestAtPlayerPosition -= OnHarvestAtPlayerPosition;
+    }
+
+    private void OnHarvestAtPlayerPosition(int ID)
+    {
+        var itemSprite = InventoryManager.Instance.GetItemDetails(ID).itemOnWorldSprite;
+        if (holdItem.enabled ==false)
+        {
+            StartCoroutine(ShowItem(itemSprite));
+        }
+    }
+
+    private IEnumerator ShowItem(Sprite itemSprite)
+    {
+        holdItem.sprite = itemSprite;
+        holdItem.enabled = true;
+        yield return new WaitForSeconds(1f);
+        holdItem.enabled = false;
     }
 
     private void OnforeSceneUnloadEvent()
@@ -50,6 +70,7 @@ public class AnimatorOverride : MonoBehaviour
             ItemType.Commodity => PartType.Carry,
             ItemType.HoeTool => PartType.Hoe,
             ItemType.WaterTool => PartType.Water,
+            ItemType.CollectTool => PartType.Collect,
             _ => PartType.None
         };
 
