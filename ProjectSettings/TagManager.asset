@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BoundsConfiner
+  - ItemParent
+  - CursorCanvas
+  - Dig
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -40,4 +45,37 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground Bottom
+    uniqueID: 3573979481
+    locked: 0
+  - name: Ground Middle
+    uniqueID: 3196318233
+    locked: 0
+  - name: Ground Top
+    uniqueID: 2435846187
+    locked: 0
+  - name: Stuff 1
+    uniqueID: 270505479
+    locked: 0
+  - name: Stuff 2
+    uniqueID: 3079722071
+    locked: 0
+  - name: Dig
+    uniqueID: 3444422281
+    locked: 0
+  - name: Water
+    uniqueID: 481149771
+    locked: 0
+  - name: Instance
+    uniqueID: 3555115165
+    locked: 0
+  - name: Front 1
+    uniqueID: 98910739
+    locked: 0
+  - name: Front 2
+    uniqueID: 1901175023
+    locked: 0
+  - name: Collision
+    uniqueID: 2853351359
     locked: 0
