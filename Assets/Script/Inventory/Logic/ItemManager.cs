@@ -32,8 +32,12 @@ namespace Inventory
             EventHandler.DropItemEvent -= OnDropItemEvent;
         }
 
-        private void OnDropItemEvent(int ID, Vector3 pos)
+        private void OnDropItemEvent(int ID, Vector3 pos, ItemType itemType)
         {
+            if (itemType == ItemType.Seed)
+            {
+                return;
+            }
             var item = Instantiate(bounceItemPrefab, PlayerTransform.position, Quaternion.identity, itemParent);
             item.itemID = ID;
             var dir = (pos - PlayerTransform.position).normalized;

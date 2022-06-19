@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Crop
+namespace CropPlant
 {
     public class CropManager : MonoBehaviour
     {
