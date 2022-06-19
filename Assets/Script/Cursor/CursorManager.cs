@@ -175,6 +175,9 @@ public class CursorManager : MonoBehaviour
         {
             switch (currentItem.itemType)
             {
+                case ItemType.Seed:
+                    if(currentTile.daysSinceDug > -1 && currentTile.seedItemID == -1) SetCursorValid(); else SetCursorInValid();
+                    break;
                 case ItemType.Commodity:
                     if(currentTile.canDropItem && currentItem.canDrop) SetCursorValid(); else SetCursorInValid();
                     break;

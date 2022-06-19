@@ -13,23 +13,6 @@ MonoBehaviour:
   m_Name: CropDataList_SO
   m_EditorClassIdentifier: 
   cropDetailsList:
-  - seedItemID: 0
-    growthDays: 
-    growthPrefabs: []
-    growthSprites: []
-    seasons: 
-    harvestToolItemID: 
-    requireActionCount: 
-    transferItemID: 0
-    producedItemID: 
-    producedMinAmount: 
-    producedMaxAmount: 
-    spawnRadius: {x: 0, y: 0}
-    daysToRegrow: 0
-    regrowTimes: 0
-    generateAtPlayerPosition: 0
-    hasAnimation: 0
-    hasParticalEffect: 0
   - seedItemID: 1002
     growthDays: 0100000002000000020000000300000003000000
     growthPrefabs:

@@ -156,4 +156,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c9cba83d461a441b5c975b29af17ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: 1007
+  itemID: 0
+  itemDetails:
+    itemID: 0
+    name: 
+    itemType: 0
+    itemIcon: {fileID: 0}
+    itemOnWorldSprite: {fileID: 0}
+    itemDescription: 
+    itemUseRadius: 0
+    canPickup: 0
+    canDrop: 0
+    canCarry: 0
+    itemPrice: 0
+    sellPercentage: 0

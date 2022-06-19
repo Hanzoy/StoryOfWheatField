@@ -61095,6 +61095,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1460919771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1460919772}
+  m_Layer: 0
+  m_Name: CropParent
+  m_TagString: CropParent
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1460919772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460919771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1475063403
 GameObject:
   m_ObjectHideFlags: 0
@@ -90014,7 +90045,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1666574688
 GameObject:
@@ -90275,7 +90306,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1942302454
 PrefabInstance:
@@ -90583,7 +90614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9067689879570145720, guid: 293d99326ecfef24f8c3e9ae70e660c1, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9067689879570145720, guid: 293d99326ecfef24f8c3e9ae70e660c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -90693,7 +90724,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6785694688032636939, guid: 2959cbd9622ea7c469c4026c52a241ff, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6785694688032636939, guid: 2959cbd9622ea7c469c4026c52a241ff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -90811,7 +90842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924897380620950252, guid: f7de57de0b9278744bb3521dd09ff35f, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7924897380620950252, guid: f7de57de0b9278744bb3521dd09ff35f, type: 3}
       propertyPath: m_LocalPosition.x
